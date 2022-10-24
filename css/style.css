@@ -219,6 +219,7 @@ span.swiper-pagination-bullet-active {
 .row2{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 .row3{
@@ -234,6 +235,21 @@ span.swiper-pagination-bullet-active {
     justify-content: center;
     align-items: center;
 }
+.row5{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.row6{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
 .section-heading{
     font-size: 4rem;
     font-weight: 600;
@@ -245,7 +261,6 @@ span.swiper-pagination-bullet-active {
 }
 .service-col{
     width: 220px;
-    height: 21vh;
     position: relative;
     border-radius: .4rem;
     margin-bottom: 5%;
@@ -254,9 +269,15 @@ span.swiper-pagination-bullet-active {
     cursor: pointer;
 }
 .img-box{
+    position: relative;
+    width: 220px;
+    height: 142px;
     width: 100%;
 }
 .img-box img{
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
     border-radius: .4rem;
 }
 .layer{
@@ -288,40 +309,18 @@ span.swiper-pagination-bullet-active {
     bottom: 50%;
     transition: .3s;
 }
-.product-name{
-    display: none;
-}
-.product-name-mobile{
-    font-size: 1.4rem;
-    font-weight: 600;
-    /* border: 1px solid #000; */
+.service-col .product-name{
+    border: 1px solid #ccc;
     border-radius: .4rem;
+    position: relative;
+    padding: .4rem 0;
     display: none;
 }
-.img-box img.service-img {
-    margin: 0 auto;
+h3.product-name-mobile {
+    font-weight: 400;
+    font-size: 1.4rem;
 }
-img.service-img.service-img-1{
-    width: 99%;
-}
-img.service-img.service-img-2{
-    width: 47%;
-}
-img.service-img.service-img-3{
-    width: 70%;
-}
-img.service-img.service-img-4{
-    width: 47%;
-}
-img.service-img.service-img-5{
-    width: 94%;
-}
-img.service-img.service-img-6{
-    width: 97%;
-}
-img.service-img.service-img-7{
-    width: 72%;
-}
+
 
 /* ABOUT SECTION */
 .about{
@@ -435,7 +434,7 @@ p.about-bold span {
 .footer-col{
     font-size: 1.8rem;
     cursor: pointer;
-    margin: 1rem .5rem 0;
+    margin: 1rem 1.4rem 0;
 }
 .footer-col i{
     color: #f44336;
@@ -449,15 +448,79 @@ p.about-bold span {
 
 
 
+/* CONTACT SECTION */
+.contact .row6 .contact-col{
+    flex-basis: 48%;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.contact-col div i{
+    color: #f44336;
+    margin: 1rem;
+    margin-right: 3rem;
+    font-size: 2rem;
+}
+.contact-col div span{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+    align-items: flex-start;
+}
+.contact-col div span h5{
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+.contact-col div span p{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.contact-col form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.contact-col form input,
+.contact-col form textarea{
+    width: 100%;
+    padding: 1rem 1rem;
+    outline: none;
+    border: 1px solid #1ABC9C;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    background: #fff6f6;
+    border-radius: 0.2rem;
+}
 
+.form-btn{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    display: block;
+    background: transparent;
+    color: #27AE60;
+    padding: 1rem 1rem;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+.form-btn:hover{
+    background: #27AE60;
+    color: #fff;
+    transition: all .3s ease-in;
+}
 
-
-
-
-
-
-
-
+.sub-banner{
+    height: 50vh;
+}
+.caption-sub-heading{
+    font-size: 3.2rem;
+    color: #fff;
+}
 
 
 
@@ -495,18 +558,17 @@ p.about-bold span {
         font-size: 3.6rem;
     }
 
+    .caption .caption-sub-heading {
+        font-size: 3rem;
+    }
+    .footer-last{
+        font-size: 1.4rem;
+    }
+
 }
 @media(max-width: 990px){
-    .product-name{
+    .service-col .product-name{
         display: block;
-    }
-    .product-name-mobile{
-        display: block;
-        padding-top: 0.5rem;
-        border: none;
-    }
-    .service-col{
-        height: 25vh;
     }
     .layer{
         display: none;
@@ -517,12 +579,24 @@ p.about-bold span {
     .row3{
         flex-direction: column;
     }
+    .row6{
+        flex-direction: column;
+    }
+    .contact-col{
+        width: 100%;
+    }
 }
 
 @media(max-width: 768px){
     /* NAVBAR SECTION */
     .navbar{
         padding: 1rem 2rem;
+    }
+    .nav-list{
+        padding: 1.2rem 0;
+    }
+    .nav-links::after {
+        display: none;
     }
     .close{
         position: absolute;
@@ -575,6 +649,11 @@ p.about-bold span {
         font-size: 2.8rem;
     }
 
+    .caption .caption-sub-heading {
+        font-size: 3rem;
+    }
+
+
 }
 
 @media(max-width: 525px){
@@ -601,4 +680,9 @@ p.about-bold span {
     .about-col:nth-child(2) p.about2-description{
         font-size: 1.3rem;
     }
+
+    .caption .caption-sub-heading {
+        font-size: 2.4rem;
+    }
+
 }

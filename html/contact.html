@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arman Enterprises</title>
+    <script src="https://kit.fontawesome.com/e575e376f5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <style>
+        .address .row iframe{
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION SECTION -->
+    <header class="navigation">
+        <nav class="navbar">
+            <a href="/html/index.html" class="logo">
+                <p class="brand-logo"><span class="big-logo">K</span>han</p>
+            </a>
+            <ul class="nav-links-group" id="navLinks">
+                <i class="fa-solid fa-xmark close" onclick="closeMenu()"></i>
+                <li class="nav-list">
+                    <a href="/html/index.html" class="nav-links">Home</a>
+                </li>
+                <li class="nav-list">
+                    <a href="/html/service.html" class="nav-links">Services</a>
+                </li>
+                <li class="nav-list">
+                    <a href="/html/about.html" class="nav-links">About</a>
+                </li>
+                <li class="nav-list">
+                    <a href="/html/shop.html" class="nav-links">Shop</a>
+                </li>
+                <li class="nav-list">
+                    <a href="/html/contact.html" class="nav-links">Contact Us</a>
+                </li>
+                <a href="" class="log-in">Login</a>
+            </ul>
+            <a href="" class="log-in" id="small-invisible">Login</a>
+            <i class="fa-solid fa-bars menu" onclick="openMenu()"></i>
+        </nav>
+    </header>
+
+    <!-- BANNER SECTION -->
+    <section class="sub-banner">
+        <div class="wrapper">
+            <div class="slides swiper-slide">
+                <img src="/img/furniture banner.png" alt="Furniture" class="slides-img">
+                <div class="caption">
+                    <h2 class="caption-sub-heading"><span class="main-word">Contact</span> Us</h2>
+                    <a href="/html/index.html" class="hero-btn"><i class="fa-solid fa-arrow-left"></i> Go Back</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ADDRESS SECTION -->
+    <section class="address">
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.17481742969795!2d72.80581199631888!3d19.421171678370204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a9395cf53b6f%3A0xb9b573bc9c0e6cf6!2sZubair%20khan%20factory!5e0!3m2!1sen!2sin!4v1666621067933!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact sections">
+        <div class="row6">
+            <div class="contact-col">
+                <div>
+                    <i class="fa-solid fa-house"></i>
+                    <span>
+                        <h5>A/301, Al-Safa Apt. Sainagar</h5> 
+                        <p>Nallasopara (W), Maharashtra</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>
+                        <h5>+91 8149644480</h5>
+                        <p>Monday to Sunday</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>
+                        <h5>muntazirkhan1972@gmail.com</h5>
+                        <p>Email us your querys</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <form action="" method="post">
+                    <input type="text" name="name" placeholder="Enter your name">
+                    <input type="email" name="email" placeholder="Enter your email address">
+                    <input type="text" name="subject" placeholder="Enter your subject">
+                    <textarea name="message" placeholder="Message...." id="message" cols="30" rows="10"></textarea>
+
+                    <a href="" class="form-btn">Send Message</a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+     <!-- FOOTER SECTION -->
+     <section class="sections footer">
+        <h2 class="section-heading"><span class="main-word">Contact</span> Us</h2>
+        <p class="section-description"></p>
+
+        <div class="footer-row">
+            <div class="footer-col">
+                <a href="/html/contact.html">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </div>
+            <div class="footer-col">
+                <a href="/html/contact.html">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <p class="footer-last">Copyright 2022 - All Rights Reserved</p>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="/js/app.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            // autoplay: {
+            //     delay: 3000,
+            //     disableOnInteraction: false,
+            // },
+            slidesPerView: 1,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
